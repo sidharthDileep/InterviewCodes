@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<section name="MavenProjectImportWizardPage">
+		<list key="rootDirectory">
+			<item value="C:\Codes\gs-producing-web-service-main\complete"/>
+			<item value="C:\Codes\medium-articles-master\consuming-soap-web-service"/>
+			<item value="C:\Codes\medium-articles-master"/>
+			<item value="C:\Codes\medium-articles-master\spring-soap-webservice"/>
+			<item value="C:\Codes\tutorials-master\tutorials-master\spring-soap"/>
+			<item value="C:\Codes\tutorials-master\tutorials-master"/>
+			<item value="C:\Codes\activeMq\spring-boot-jms-master\spring-boot-jms-master"/>
+			<item value="C:\Codes\activeMq\SpringBootJmsConsumer\SpringBootJmsConsumer"/>
+			<item value="C:\Codes\activeMq\SpringBootJmsPublisher\SpringBootJmsPublisher"/>
+			<item value="C:\Codes\Spring-Boot-AOP-Around-Advice\Spring-Boot-AOP-Around-Advice"/>
+			<item value="C:\Codes\Spring-Boot-Scheduler\Spring-Boot-Scheduler"/>
+			<item value="C:\Users\VR763VS\Downloads\Spring-Boot-JPA-Relationships-OneToMany-Create-Record\Spring-Boot-JPA-Relationships-OneToMany-Create-Record"/>
+			<item value="C:\Codes\Download-and-Run-Zipkin-Server\Create-Config-Server\Create-Config-Server"/>
+			<item value="C:\Codes\Download-and-Run-Zipkin-Server\Profiles-with-Config-Server\Profiles-with-Config-Server"/>
+			<item value="C:\Codes\Configure-Spring-Cloud-API-Gateway\Profiles-with-Config-Server.zip\Profiles-with-Config-Server"/>
+		</list>
+		<list key="projectNameTemplate">
+			<item value="[artifactId]"/>
+			<item value="[artifactId]-TRUNK"/>
+			<item value="[artifactId]-[version]"/>
+			<item value="[groupId].[artifactId]"/>
+			<item value="[groupId].[artifactId]-[version]"/>
+			<item value="[name]"/>
+		</list>
+	</section>
+	<section name="org.eclipse.m2e.core.pom.overview">
+		<list key="ciManagementUrl">
+		</list>
+		<list key="ciManagementSystem">
+		</list>
+		<list key="issueManagementSystem">
+		</list>
+		<list key="issueManagementUrl">
+		</list>
+	</section>
+	<section name="org.eclipse.m2e.core.pom.dependencies">
+	</section>
+</section>

@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Extract method &apos;private static void Twosum1(int [] nums)&apos; from &apos;problems.TwoSum.main(...)&apos; to &apos;problems.TwoSum&apos;&#x0D;&#x0A;- Original project: &apos;Problem Solving&apos;&#x0D;&#x0A;- Method name: &apos;Twosum1&apos;&#x0D;&#x0A;- Destination type: &apos;problems.TwoSum&apos;&#x0D;&#x0A;- Declared visibility: &apos;private&apos;" comments="false" description="Extract method &apos;Twosum1&apos;" destination="0" exceptions="false" flags="786434" id="org.eclipse.jdt.ui.extract.method" input="/src&lt;problems{TwoSum.java" name="Twosum1" replace="false" selection="338 375" stamp="1662825331730" version="1.0" visibility="2"/>
+</session>

@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename compilation unit &apos;behavioral.memento.Orginator.java&apos; to &apos;Originator.java&apos;&#x0D;&#x0A;- Original project: &apos;Design Patterns&apos;&#x0D;&#x0A;- Original element: &apos;behavioral.memento.Orginator.java&apos;&#x0D;&#x0A;- Renamed element: &apos;behavioral.memento.Originator.java&apos;" description="Rename compilation unit &apos;Orginator.java&apos;" flags="2" id="org.eclipse.jdt.ui.rename.compilationunit" input="/src&lt;behavioral.memento{Orginator.java" name="Originator.java" references="false" stamp="1661577848446" version="1.0"/>
+</session>

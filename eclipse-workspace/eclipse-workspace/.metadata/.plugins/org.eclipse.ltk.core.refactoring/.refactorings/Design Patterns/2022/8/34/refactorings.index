@@ -1,0 +1,20 @@
+1660644485140	Delete element
+1660645037906	Delete element
+1660728802169	Copy compilation unit
+1660728804888	Delete element
+1660886960355	Move compilation unit
+1660886965043	Delete element
+1660903183382	Rename package 'singleton'
+1660903706289	Rename package 'abstractFactory'
+1660903730766	Rename package 'factory'
+1660903741378	Rename package 'bridge'
+1660903755768	Rename package 'builder'
+1660903799880	Rename package 'Template'
+1660903830155	Rename package 'Mediator'
+1660903853994	Rename package 'adaptor'
+1660903862102	Rename package 'composite'
+1660903871186	Rename package 'decorator'
+1660903880814	Rename package 'prototype'
+1660903889704	Rename package 'proxy'
+1660917980024	Rename type 'Shoppingcart'
+1660918536553	Rename package 'structural.prototype'

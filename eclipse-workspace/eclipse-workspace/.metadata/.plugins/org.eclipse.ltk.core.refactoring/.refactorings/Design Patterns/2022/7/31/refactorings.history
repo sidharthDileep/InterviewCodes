@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename package &apos;Singleton&apos; to &apos;singleton&apos;&#x0D;&#x0A;- Original project: &apos;Design Patterns&apos;&#x0D;&#x0A;- Original element: &apos;Design Patterns/src/Singleton&apos;&#x0D;&#x0A;- Renamed element: &apos;Design Patterns/src/singleton&apos;&#x0D;&#x0A;- Update references to refactored element&#x0D;&#x0A;- Update textual occurrences in comments and strings" description="Rename package &apos;Singleton&apos;" flags="589830" hierarchical="false" id="org.eclipse.jdt.ui.rename.package" input="/src&lt;Singleton" name="singleton" qualified="false" references="true" stamp="1659088871292" textual="false" version="1.0"/>
+</session>

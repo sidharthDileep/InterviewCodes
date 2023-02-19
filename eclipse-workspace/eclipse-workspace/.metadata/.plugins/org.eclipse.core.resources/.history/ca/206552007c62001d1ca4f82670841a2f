@@ -1,0 +1,53 @@
+package problems;
+
+import java.util.HashMap;
+import java.util.Map;
+
+public class SmallestString {
+
+	public static void main(String[] args) {
+		int[] A = { 2, 1, 4, 3, 6, 5 };
+		int n = A.length;
+
+		findSmallestArray(A, n);
+	}
+
+	private static void findSmallestArray(int[] a, int n) {
+
+		int count = n - 1;
+
+		Map<String, Integer> map = new HashMap<>();
+
+		for (int i = 0; i < n && count > 0; i++) {
+			int mn = a[i];
+			int pos = i;
+
+			for (int j = i + 1; j < n; j++) {
+
+				if (a[i] < mn) {
+					mn = a[j];
+					pos = j;
+				}
+
+			}
+
+			while (pos > i && count > 0 && 
+					!map.containsKey(String.valueOf(pos - 1) + "#" + String.valueOf(pos))) {
+				map.put(String.valueOf(pos - 1) + "#" + String.valueOf(pos), 1);
+
+				int temp = a[pos];
+				a[pos] = a[pos - 1];
+				a[pos - 1] = temp;
+				--pos;
+				--count;
+
+			}
+		
+		}
+		
+		for (int j = 0; j < n; ++j)
+		      System.out.print(a[j] + " ");
+
+	}
+
+}

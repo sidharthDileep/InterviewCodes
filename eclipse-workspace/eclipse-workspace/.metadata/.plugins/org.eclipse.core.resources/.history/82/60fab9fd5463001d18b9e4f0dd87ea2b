@@ -1,0 +1,39 @@
+package problems.interview.tricky;
+
+import java.util.Arrays;
+import java.util.HashMap;
+import java.util.Map;
+
+public class TrickyQuestions3 {
+
+	public static void main(String[] args) {
+		
+		int[] arr = new int[]{1,2,3,4,5,6,7,8,9,10};
+		
+		CalculateArray calc = (ar) -> Arrays.stream(ar).sum();
+		
+		System.out.println(calc.sum(arr));
+		
+		Map<String, String> map = new HashMap<>();
+		map.put(new String("a"), "audi");
+		map.put(new String("a"), "ferrari");
+		
+		System.out.println(map);
+		
+		String s1 = new String("Hi");
+		String s2 = new String("Hi");
+		String s3 = s1;
+		
+		if(s1.equals(s2)) {
+			System.out.println("1");
+		}
+	}
+
+}
+
+@FunctionalInterface
+interface CalculateArray {
+
+	int sum(int[] arr);
+
+}

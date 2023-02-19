@@ -1,0 +1,21 @@
+package problems.interview.tricky;
+
+public class ParentChildTest {
+
+	public static void main(String[] args) {
+		
+		Parent p = new Parent();
+		System.out.println(p.a);
+
+	}
+
+}
+
+
+class Parent{
+	static int a = 5;
+}
+
+class child extends Parent{
+	
+}

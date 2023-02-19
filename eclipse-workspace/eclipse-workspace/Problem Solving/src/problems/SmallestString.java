@@ -1,0 +1,153 @@
+package problems;
+
+import java.util.Arrays;
+import java.util.HashMap;
+import java.util.Map;
+
+public class SmallestString {
+
+	public static void main(String[] args) {
+		int[] A = { 2, 1, 4, 3, 6, 5 };
+
+		String a = "aabcba"; // aabbca aabbac
+		char[] ar = a.toCharArray();
+
+		findSmallestArray(ar);
+
+		int n = A.length;
+
+		findSmallestArray(A, n);
+	}
+
+	private static void findSmallestArray(int[] a, int n) {
+
+		int count = n - 1;
+
+		Map<String, Integer> map = new HashMap<>();
+
+		for (int i = 0; i < n && count > 0; i++) {
+			int mn = a[i];
+			int pos = i;
+
+			for (int j = i + 1; j < n; j++) {
+
+				if (a[j] < mn) {
+					mn = a[j];
+					pos = j;
+				}
+
+			}
+
+			System.out.println(Arrays.toString(a));
+
+			while (pos > i && count > 0 && !map.containsKey(String.valueOf(pos - 1) + "#" + String.valueOf(pos))) {
+				map.put(String.valueOf(pos - 1) + "#" + String.valueOf(pos), 1);
+
+				int temp = a[pos];
+				a[pos] = a[pos - 1];
+				a[pos - 1] = temp;
+				--pos;
+				--count;
+
+			}
+			System.out.println(map);
+		}
+
+		for (int j = 0; j < n; ++j)
+			System.out.print(a[j] + " ");
+
+		System.out.println();
+
+	}
+
+	private static void findSmallestArray(char[] a) {
+		int n = a.length;
+		int count = n - 1;
+
+		Map<String, Integer> map = new HashMap<>();
+
+		for (int i = 0; i < n && count > 0; i++) {
+			char mn = a[i];
+			int pos = i;
+
+			for (int j = i + 1; j < n; j++) {
+
+				if (a[j] < mn) {
+					mn = a[j];
+					pos = j;
+				}
+
+			}
+
+			System.out.println(Arrays.toString(a));
+
+			while (pos > i && count > 0 
+					&& !map.containsKey(String.valueOf(pos - 1) + "#" + String.valueOf(pos))) {
+				map.put(String.valueOf(pos - 1) + "#" + String.valueOf(pos), 1);
+
+				char temp = a[pos];
+				a[pos] = a[pos - 1];
+				a[pos - 1] = temp;
+				--pos;
+				--count;
+
+			}
+			System.out.println(map);
+		}
+
+		for (int j = 0; j < n; ++j)
+			System.out.print(a[j] + " ");
+
+		System.out.println();
+	}
+
+	static String findSmallest(char[] s) {
+		int len = s.length;
+
+		// Store last occurrence of every character
+		int[] loccur = new int[26];
+
+		// Set -1 as default for every character.
+		Arrays.fill(loccur, -1);
+
+		for (int i = len - 1; i >= 0; --i) {
+
+			// Character index to fill
+			// in the last occurrence array
+			int chI = s[i] - 'a';
+			if (loccur[chI] == -1) {
+
+				// If this is true then this
+				// character is being visited
+				// for the first time from the last
+				// Thus last occurrence of this
+				// character is stored in this index
+				loccur[chI] = i;
+			}
+		}
+
+		char[] sorted_s = s;
+		Arrays.sort(sorted_s);
+
+		for (int i = 0; i < len; ++i) {
+			if (s[i] != sorted_s[i]) {
+
+				// Character to replace
+				int chI = sorted_s[i] - 'a';
+
+				// Find the last occurrence
+				// of this character.
+				int last_occ = loccur[chI];
+
+				// Swap this with the last occurrence
+				char temp = s[last_occ];
+				s[last_occ] = s[i];
+				s[i] = temp;
+				break;
+			}
+		}
+
+		return String.valueOf(s);
+	}
+
+}

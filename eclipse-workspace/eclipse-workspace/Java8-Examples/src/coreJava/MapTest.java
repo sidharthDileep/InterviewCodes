@@ -1,0 +1,115 @@
+package coreJava;
+
+import static java.util.Map.Entry.comparingByValue;
+
+import java.util.Collections;
+import java.util.HashMap;
+import java.util.Hashtable;
+import java.util.Iterator;
+import java.util.LinkedHashMap;
+import java.util.LinkedList;
+import java.util.List;
+import java.util.Map;
+import java.util.Map.Entry;
+import java.util.TreeMap;
+import java.util.stream.Collectors;
+
+public class MapTest {
+
+	public static void main(String[] args) {
+		Map<Integer, String> hmap = new HashMap<>();
+
+		hmap.put(42, "Sachin");
+		hmap.put(21, "Leonardo");
+		hmap.put(23, "Tom");
+		hmap.put(13, "SpiderMan");
+
+		for (Map.Entry<Integer, String> entry : hmap.entrySet()) {
+			System.out.println(entry.getKey() + " " + entry.getValue());
+		}
+
+		System.out.println("*****************");
+
+		TreeMap<Integer, String> tmap = new TreeMap<>(hmap);
+
+		Iterator<Integer> it = tmap.keySet().iterator();
+
+		while (it.hasNext()) {
+			int key = (int) it.next();
+			System.out.println(key + " " + tmap.get(key));
+		}
+
+		List<Map.Entry> list = new LinkedList<>(hmap.entrySet());
+		
+		System.out.println("Print LL : " + list);
+		
+		/*
+		 * Collections.sort(list, new Comparator() {
+		 * 
+		 * @Override public int compare(Object o1, Object o2) { //return ((Comparable)
+		 * ((Map.Entry) (o1)).getValue()).compareTo(((Map.Entry) (o2)).getValue());
+		 * return
+		 * ((Comparable)((Map.Entry)(o1)).getValue()).compareTo(((Map.Entry)(o2)).
+		 * getValue());
+		 * 
+		 * } });
+		 */
+		
+		Collections.sort(list, (Entry o1, Entry o2)-> {
+				return ((Comparable)o1.getValue()).compareTo(o2.getValue());
+		});
+
+		HashMap<Integer, String> sortedHashMap = new LinkedHashMap<>();
+
+		/*
+		 * for (Iterator it3 = list.iterator(); it3.hasNext();) { Map.Entry<Integer,
+		 * String> entry = (Entry<Integer, String>) it3.next();
+		 * sortedHashMap.put(entry.getKey(), entry.getValue()); }
+		 */
+
+		Iterator<Entry> it3 = list.iterator();
+		
+		while(it3.hasNext()) {
+			Map.Entry<Integer, String> entry = (Entry<Integer, String>) it3.next();
+			sortedHashMap.put(entry.getKey(), entry.getValue());
+		}
+		
+		System.out.println("*****************");
+
+		Iterator it2 = sortedHashMap.keySet().iterator();
+
+		while (it2.hasNext()) {
+			int key = (int) it2.next();
+			System.out.println(key + " " + tmap.get(key));
+		}
+
+		System.out.println("*****************");
+		
+		Map<String, Integer> budget = new HashMap<>(); 
+		budget.put("clothes", 120); 
+		budget.put("grocery", 150); 
+		budget.put("transportation", 100); 
+		budget.put("utility", 130); 
+		budget.put("rent", 1150); 
+		budget.put("miscellneous", 90); 
+		System.out.println("map before sorting: " + budget);
+
+		
+		// let's sort this map by values first
+		Map<String, Integer> sorted = budget.entrySet().stream().sorted(comparingByValue())
+				.collect(Collectors.toMap(e -> e.getKey(), e -> e.getValue(), (e1, e2) -> e2, LinkedHashMap::new));
+
+		System.out.println("map after sorting by values: " + sorted);
+
+		// above code can be cleaned a bit by using method reference
+		sorted = budget.entrySet().stream().sorted(comparingByValue())
+				.collect(Collectors.toMap(Map.Entry::getKey, Map.Entry::getValue, (e1, e2) -> e2, LinkedHashMap::new));
+
+		// now let's sort the map in decreasing order of value
+		sorted = budget.entrySet().stream().sorted(Collections.reverseOrder(Map.Entry.comparingByValue()))
+				.collect(Collectors.toMap(Map.Entry::getKey, Map.Entry::getValue, (e1, e2) -> e2, LinkedHashMap::new));
+
+		System.out.println("map after sorting by values in descending order: " + sorted);
+	}
+
+}

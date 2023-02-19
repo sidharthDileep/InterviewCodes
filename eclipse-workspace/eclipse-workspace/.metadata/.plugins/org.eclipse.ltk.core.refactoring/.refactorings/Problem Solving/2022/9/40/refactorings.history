@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename type &apos;problems.ContiguousSum&apos; to &apos;TargetSum&apos;&#x0D;&#x0A;- Original project: &apos;Problem Solving&apos;&#x0D;&#x0A;- Original element: &apos;problems.ContiguousSum&apos;&#x0D;&#x0A;- Renamed element: &apos;problems.TargetSum&apos;&#x0D;&#x0A;- Update references to refactored element&#x0D;&#x0A;- Update textual occurrences in comments and strings" description="Rename type &apos;ContiguousSum&apos;" flags="589830" id="org.eclipse.jdt.ui.rename.type" input="/src&lt;problems{ContiguousSum.java[ContiguousSum" matchStrategy="1" name="TargetSum" qualified="false" references="true" similarDeclarations="false" stamp="1664522062892" textual="false" version="1.0"/>
+</session>

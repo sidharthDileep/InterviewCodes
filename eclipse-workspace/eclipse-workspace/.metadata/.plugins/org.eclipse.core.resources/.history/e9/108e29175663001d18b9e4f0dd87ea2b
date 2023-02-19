@@ -1,0 +1,17 @@
+package problems.interview.tricky;
+
+public class SubTypeTest {
+
+}
+
+class Vehicle {
+
+}
+
+class Car extends Vehicle {
+
+}
+
+class Bike extends Vehicle {
+
+}
