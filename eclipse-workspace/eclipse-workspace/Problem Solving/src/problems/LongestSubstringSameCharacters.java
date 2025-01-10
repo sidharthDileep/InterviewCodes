@@ -70,5 +70,30 @@ public class LongestSubstringSameCharacters {
 		}
 		return substring.substring(0, n);
 	}
-
+	
+	public static String longestRepeatedSubstring(String s) {
+		if(s.length() == 0 || s.isEmpty()) return "";
+		
+		int currLength = 0;
+		int maxLength = 0;
+		int start = 0;
+		
+		for(int i = 1; i < s.length(); i++) {
+			if(s.charAt(i) == s.charAt(i - 1)) currLength++;
+			else {
+				if(currLength > maxLength) {
+					maxLength = currLength;
+					start = i - currLength;
+				}
+				currLength = 1;
+			}
+		}
+		
+		if(currLength > maxLength) {
+			currLength = maxLength;
+			start = s.length() - currLength;
+		}
+		
+		return s.substring(start, start + maxLength);
+	}
 }
